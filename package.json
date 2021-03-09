@@ -1,0 +1,41 @@
+{
+  "name": "ky-for-people",
+  "scripts": {
+    "bt": "yarn build && yarn test",
+    "build": "tsn build",
+    "test": "node scripts/test.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@naturalcycles/dev-lib": "^10.14.4",
+    "@naturalcycles/js-lib": "^14.0.0",
+    "@naturalcycles/nodejs-lib": "^12.12.2",
+    "@types/node": "^14.0.1"
+  },
+  "files": [
+    "index.cjs",
+    "index.esm.js",
+    "index.d.ts",
+    "ky.cjs"
+  ],
+  "main": "index.cjs",
+  "module": "index.esm.js",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirillgroshkov/ky-for-people"
+  },
+  "engines": {
+    "node": ">=12.13.1"
+  },
+  "version": "2.13.1",
+  "description": "ky+universal, transpiled down",
+  "author": "Kirill Groshkov",
+  "license": "MIT"
+}

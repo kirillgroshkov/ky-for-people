@@ -1,0 +1,12 @@
+{
+  "extends": "@naturalcycles/dev-lib/cfg/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "tmp/dist",
+    "allowJs": true,
+    "target": "es2017",
+    "lib": ["esnext", "dom", "dom.iterable"]
+  },
+  "files": [
+    "index.esm.js"
+  ],
+}
