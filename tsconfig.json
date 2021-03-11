@@ -7,6 +7,6 @@
     "lib": ["esnext", "dom", "dom.iterable"]
   },
   "files": [
-    "index.esm.js"
+    "index.js"
   ],
 }

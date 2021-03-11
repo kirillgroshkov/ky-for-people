@@ -40,10 +40,17 @@ runScript(async () => {
     outputDir: projectDir,
   })
 
-  fs.renameSync(`${projectDir}/index.js`, `${projectDir}/index.esm.js`)
+  // fs.moveSync(`${tmpDir}/index.js`, `${projectDir}/index.js`)
 
-  // tsc index.esm.js to tmp/dist/index.esm.js (which is CommonJS)
-  await execCommand(`tsc`)
+  // tsc index.js to tmp/dist/index.js (CommonJS)
+  await execCommand(`tsc --module commonjs`)
 
-  fs.renameSync(`${tmpDir}/dist/index.esm.js`, `${projectDir}/ky.cjs`)
+  fs.renameSync(`${tmpDir}/dist/index.js`, `${projectDir}/ky.cjs`)
+
+  // tsc index.js to tmp/dist/index.js (ESM)
+  await execCommand(`tsc --module esnext`)
+
+  fs.renameSync(`${tmpDir}/dist/index.js`, `${projectDir}/index.esm.js`)
+
+  fs.unlinkSync(`${projectDir}/index.js`)
 })
