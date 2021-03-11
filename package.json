@@ -34,7 +34,7 @@
   "engines": {
     "node": ">=12.13.1"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ky+universal, transpiled down",
   "author": "Kirill Groshkov",
   "license": "MIT"
